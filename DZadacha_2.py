@@ -9,20 +9,9 @@
 # 5 6 -> 2
 
 
-S = int(input('Введите сумму чисел X и Y: '))
-
-P = int(input('Введите произведение чисел X и Y: '))
-
-factors = list()
-for i in range(2, P):
-    if P % i == 0:
-        factors.append(i)
-
-print(factors)
-
-for i in range(len(factors)):
-    for j in range(len(factors)):
-        if j == i:
-            continue
-        if i * j == S:
-            print(i, j)
+s = int(input("Введите сумму чисел: "))
+p = int(input("Введите произведение чисел: "))
+for x in range(1, 1001):
+    y = s - x
+    if x <= y and x * y == p:
+        print("Натуральные числа: " , x , "," , y)
